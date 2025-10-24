@@ -1,0 +1,192 @@
+/* Reset và base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0ea5e9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geometric background */
+.geometric-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  animation: geometricFloat 25s infinite ease-in-out;
+}
+.shape:nth-child(1) { width: 100px; height: 100px; top: 15%; left: 85%; animation-delay: 0s; }
+.shape:nth-child(2) { width: 60px; height: 60px; top: 70%; left: 10%; animation-delay: -8s; }
+.shape:nth-child(3) { width: 80px; height: 80px; top: 30%; left: 20%; animation-delay: -15s; }
+.shape:nth-child(4) { width: 120px; height: 120px; bottom: 10%; right: 15%; animation-delay: -20s; }
+
+@keyframes geometricFloat {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
+  25% { transform: translateY(-30px) translateX(20px) scale(1.1); }
+  50% { transform: translateY(-10px) translateX(-15px) scale(0.9); }
+  75% { transform: translateY(-40px) translateX(10px) scale(1.05); }
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header h1 {
+  color: #0ea5e9;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Floating label --- */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1rem;
+  pointer-events: none;
+  background: white;
+  padding: 0 6px;
+  transition: 0.2s ease all;
+}
+
+.form-input:focus + label,
+.form-input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 10px;
+  font-size: 0.85rem;
+  color: #3b82f6;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgot-password a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-social {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.btn-google { color: #db4437; }
+.btn-facebook { color: #4267b2; }
+
+.btn-google:hover { background: #fef2f2; border-color: #db4437; }
+.btn-facebook:hover { background: #eff6ff; border-color: #4267b2; }
+
+.auth-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.auth-links a {
+  color: #0ea5e9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-links a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
