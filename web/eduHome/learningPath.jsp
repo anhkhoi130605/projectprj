@@ -103,7 +103,7 @@
                         <div class="learning-path-card-content">
                             <h3>Lộ trình học Back-end</h3>
                             <p>Trái với Front-end thì lộ trình Back-end là người làm việc với dữ liệu, công việc thường nằm ở lộ trình "Back-end" bạn nên tập trung vào lộ trình "Back-end" nhé.</p>
-                            <button class="learning-path-btn" onclick="navigateTo('learningPathDetail.jsp')">XEM CHI TIẾT</button>
+                            <button class="learning-path-btn" onclick="navigateTo('learningPathBE.jsp')">XEM CHI TIẾT</button>
                         </div>
                         <div class="learning-path-card-icon">
                             <img src="${pageContext.request.contextPath}/assets/images/learningPath2.jpg" alt="Backend Learning Path" class="path-icon-image" />

@@ -235,9 +235,9 @@
                 </div>
                 
                 <div class="pro-courses-grid">
-                    <div class="pro-course-card" onclick="navigateTo('pro.jsp')">
-                        <div class="course-image gradient-blue">
-                            <img src="${pageContext.request.contextPath}/assets/images/course3.webp" alt="HTML CSS Pro" class="course-image-img" />
+                    <div class="pro-course-card" onclick="openAuthModal('signup')">
+                        <div class="course-image">
+                            <img src="${pageContext.request.contextPath}/assets/images/pro1.webp" alt="HTML CSS Pro" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>HTML, CSS Pro</h3>
@@ -269,9 +269,9 @@
                         </div>
                     </div>
 
-                    <div class="pro-course-card" onclick="navigateTo('pro.jsp')">
-                        <div class="course-image gradient-yellow">
-                            <img src="${pageContext.request.contextPath}/assets/images/pro-course-2.jpg" alt="JavaScript Pro" class="course-image-img" />
+                    <div class="pro-course-card" onclick="openAuthModal('signup')">
+                        <div class="course-image">
+                            <img src="${pageContext.request.contextPath}/assets/images/pro2.jpg" alt="JavaScript Pro" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>JavaScript Pro</h3>
@@ -303,9 +303,9 @@
                         </div>
                     </div>
 
-                    <div class="pro-course-card" onclick="navigateTo('pro.jsp')">
-                        <div class="course-image gradient-pink">
-                            <img src="${pageContext.request.contextPath}/assets/images/pro-course-3.jpg" alt="Ngôn ngữ Sass" class="course-image-img" />
+                    <div class="pro-course-card" onclick="openAuthModal('signup')">
+                        <div class="course-image ">
+                            <img src="${pageContext.request.contextPath}/assets/images/pro3.png" alt="Ngôn ngữ Sass" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>Ngôn ngữ Sass</h3>
@@ -348,9 +348,9 @@
                 </div>
                 
                 <div class="free-courses-grid">
-                    <div class="free-course-card" onclick="navigateTo('free.jsp')">
-                        <div class="course-image gradient-red-purple">
-                            <img src="${pageContext.request.contextPath}/assets/images/free-course-1.jpg" alt="Kiến Thức Nền Tảng" class="course-image-img" />
+                    <div class="free-course-card" onclick="navigateTo('lessonNewbie.jsp?id=1')">
+                        <div class="course-image">
+                            <img src="${pageContext.request.contextPath}/assets/images/free1.jpg" alt="Kiến Thức Nền Tảng" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>Kiến Thức Nền Tảng</h3>
@@ -381,9 +381,9 @@
                         </div>
                     </div>
 
-                    <div class="free-course-card" onclick="navigateTo('free.jsp')">
-                        <div class="course-image gradient-cyan">
-                            <img src="${pageContext.request.contextPath}/assets/images/free-course-2.jpg" alt="Lập trình C++" class="course-image-img" />
+                    <div class="free-course-card" onclick="navigateTo('lessonNewbie.jsp?id=2')">
+                        <div class="course-image">
+                            <img src="${pageContext.request.contextPath}/assets/images/free2.png" alt="Lập trình C++" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>Lập trình C++ cơ bản, nâng cao</h3>
@@ -414,9 +414,9 @@
                         </div>
                     </div>
 
-                    <div class="free-course-card" onclick="navigateTo('free.jsp')">
-                        <div class="course-image gradient-blue-purple">
-                            <img src="${pageContext.request.contextPath}/assets/images/free-course-3.jpg" alt="HTML CSS từ Zero đến Hero" class="course-image-img" />
+                    <div class="free-course-card" onclick="navigateTo('lessonNewbie.jsp?id=3')">
+                        <div class="course-image ">
+                            <img src="${pageContext.request.contextPath}/assets/images/free3.png" alt="HTML CSS từ Zero đến Hero" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>HTML, CSS từ Zero đến Hero</h3>
@@ -447,9 +447,9 @@
                         </div>
                     </div>
 
-                    <div class="free-course-card" onclick="navigateTo('free.jsp')">
-                        <div class="course-image gradient-magenta">
-                            <img src="${pageContext.request.contextPath}/assets/images/free-course-4.jpg" alt="Responsive Với Grid System" class="course-image-img" />
+                    <div class="free-course-card" onclick="navigateTo('lessonNewbie.jsp?id=4')">
+                        <div class="course-image">
+                            <img src="${pageContext.request.contextPath}/assets/images/free4.png" alt="Responsive Với Grid System" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>Responsive Với Grid System</h3>
@@ -480,9 +480,9 @@
                         </div>
                     </div>
 
-                    <div class="free-course-card" onclick="navigateTo('free.jsp')">
-                        <div class="course-image gradient-yellow-orange">
-                            <img src="${pageContext.request.contextPath}/assets/images/free-course-5.jpg" alt="Lập Trình JavaScript Cơ Bản" class="course-image-img" />
+                    <div class="free-course-card" onclick="navigateTo('lessonNewbie.jsp?id=5')">
+                        <div class="course-image">
+                            <img src="${pageContext.request.contextPath}/assets/images/free5.jpg" alt="Lập Trình JavaScript Cơ Bản" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>Lập Trình JavaScript Cơ Bản</h3>
@@ -513,9 +513,9 @@
                         </div>
                     </div>
 
-                    <div class="free-course-card" onclick="navigateTo('free.jsp')">
-                        <div class="course-image gradient-orange-red">
-                            <img src="${pageContext.request.contextPath}/assets/images/free-course-6.jpg" alt="Lập Trình JavaScript Nâng Cao" class="course-image-img" />
+                    <div class="free-course-card" onclick="navigateTo('lessonNewbie.jsp?id=6')">
+                        <div class="course-image">
+                            <img src="${pageContext.request.contextPath}/assets/images/free6.jpg" alt="Lập Trình JavaScript Nâng Cao" class="course-image-img" />
                         </div>
                         <div class="course-content">
                             <h3>Lập Trình JavaScript Nâng Cao</h3>
@@ -556,9 +556,9 @@
                 </div>
                 
                 <div class="videos-scroll">
-                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
+                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=NVmi45IPG80', '_blank')">
                         <div class="video-thumbnail">
-                            <img src="${pageContext.request.contextPath}/images/video-thumb1.png" alt="HTML CSS">
+                            <img src="${pageContext.request.contextPath}/assets/images/video1.jpg" alt="HTML CSS">
                             <span class="play-button">▶</span>
                             <span class="duration">07:53</span>
                         </div>
@@ -572,9 +572,9 @@
                         </div>
                     </div>
 
-                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
+                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=YH-E4Y3EaT4', '_blank')">
                         <div class="video-thumbnail">
-                            <img src="${pageContext.request.contextPath}/images/video-thumb2.png" alt="Internship">
+                            <img src="${pageContext.request.contextPath}/assets/images/video2.jpg" alt="Internship">
                             <span class="play-button">▶</span>
                             <span class="duration">34:51</span>
                         </div>
@@ -588,14 +588,14 @@
                         </div>
                     </div>
 
-                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
+                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=70j3UJO-_uY', '_blank')">
                         <div class="video-thumbnail">
-                            <img src="${pageContext.request.contextPath}/images/video-thumb3.png" alt="Programming Methods">
+                            <img src="${pageContext.request.contextPath}/assets/images/video3.jpg" alt="Programming Methods">
                             <span class="play-button">▶</span>
                             <span class="duration">24:06</span>
                         </div>
                         <div class="video-info">
-                            <h3>Phương pháp học lập trình của Admin F8?</h3>
+                            <h3>Phương pháp học lập trình </h3>
                             <div class="video-stats">
                                 <span>131.590 lượt xem</span>
                                 <span>6.203 lượt thích</span>
@@ -604,9 +604,9 @@
                         </div>
                     </div>
 
-                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
+                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=IjWuRvHyS3Q', '_blank')">
                         <div class="video-thumbnail">
-                            <img src="${pageContext.request.contextPath}/images/video-thumb4.png" alt="Code Battle">
+                            <img src="${pageContext.request.contextPath}/assets/images/video4.jpg" alt="Code Battle">
                             <span class="play-button">▶</span>
                             <span class="duration">25:10</span>
                         </div>
@@ -620,37 +620,7 @@
                         </div>
                     </div>
 
-                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
-                        <div class="video-thumbnail">
-                            <img src="${pageContext.request.contextPath}/images/video-thumb5.png" alt="JavaScript">
-                            <span class="play-button">▶</span>
-                            <span class="duration">07:53</span>
-                        </div>
-                        <div class="video-info">
-                            <h3>Javascript có thể làm được gì? Giới thiệu qua về trang F8 | Học lập...</h3>
-                            <div class="video-stats">
-                                <span>866.330 lượt xem</span>
-                                <span>4.576 lượt thích</span>
-                                <span>131 bình luận</span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">
-                        <div class="video-thumbnail">
-                            <img src="${pageContext.request.contextPath}/images/video-thumb6.png" alt="React JS">
-                            <span class="play-button">▶</span>
-                            <span class="duration">10:41</span>
-                        </div>
-                        <div class="video-info">
-                            <h3>ReactJS là gì? Tại sao nên học ReactJS?</h3>
-                            <div class="video-stats">
-                                <span>515.644 lượt xem</span>
-                                <span>3.908 lượt thích</span>
-                                <span>351 bình luận</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -664,10 +634,10 @@
                 <div class="articles-scroll">
                     <article class="article-card" onclick="navigateTo('articlesDetail.jsp')">
                         <div class="article-image">
-                            <img src="${pageContext.request.contextPath}/images/article-thumb1.png" alt="Student Collection">
+                            <img src="${pageContext.request.contextPath}/assets/images/art1.jpg" alt="Student Collection">
                         </div>
                         <div class="article-info">
-                            <h3>Tổng hợp các sản phẩm của học viên tại F8</h3>
+                            <h3>Tổng hợp các sản phẩm của học viên tại E-Learning System </h3>
                             <div class="article-meta">
                                 <span class="author">Sơn Đặng</span>
                                 <span class="date">6 phút đọc</span>
@@ -677,7 +647,7 @@
 
                     <article class="article-card" onclick="navigateTo('articlesDetail.jsp')">
                         <div class="article-image">
-                            <img src="${pageContext.request.contextPath}/images/article-thumb2.png" alt="Webpack React">
+                            <img src="${pageContext.request.contextPath}/assets/images/art2.jpg" alt="Webpack React">
                         </div>
                         <div class="article-info">
                             <h3>[Phần 1] Tạo dự án ReactJS với Webpack và Babel</h3>
@@ -690,7 +660,7 @@
 
                     <article class="article-card" onclick="navigateTo('articlesDetail.jsp')">
                         <div class="article-image">
-                            <img src="${pageContext.request.contextPath}/images/article-thumb3.png" alt="GitHub Pages">
+                            <img src="${pageContext.request.contextPath}/assets/images/art3.png" alt="GitHub Pages">
                         </div>
                         <div class="article-info">
                             <h3>Cách đưa code lên GitHub và tạo GitHub Pages</h3>
@@ -703,10 +673,10 @@
 
                     <article class="article-card" onclick="navigateTo('articlesDetail.jsp')">
                         <div class="article-image">
-                            <img src="${pageContext.request.contextPath}/images/article-thumb4.png" alt="F8 Experience">
+                            <img src="${pageContext.request.contextPath}/assets/images/art4.jpg" alt="F8 Experience">
                         </div>
                         <div class="article-info">
-                            <h3>Kỳ sự ngày thứ 25 học ở F8</h3>
+                            <h3>Kỳ sự ngày thứ 25 học ở E-Learning System </h3>
                             <div class="article-meta">
                                 <span class="author">Sơn Sơn</span>
                                 <span class="date">1 phút đọc</span>
@@ -714,31 +684,7 @@
                         </div>
                     </article>
 
-                    <article class="article-card" onclick="navigateTo('articlesDetail.jsp')">
-                        <div class="article-image">
-                            <img src="${pageContext.request.contextPath}/images/article-thumb5.png" alt="Article 5">
-                        </div>
-                        <div class="article-info">
-                            <h3>Các nguồn tài nguyên hữu ích cho 1 front-end developer</h3>
-                            <div class="article-meta">
-                                <span class="author">Dương Vương</span>
-                                <span class="date">2 phút đọc</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card" onclick="navigateTo('articlesDetail.jsp')">
-                        <div class="article-image">
-                            <img src="${pageContext.request.contextPath}/images/article-thumb6.png" alt="Article 6">
-                        </div>
-                        <div class="article-info">
-                            <h3>Thời gian và Động lực</h3>
-                            <div class="article-meta">
-                                <span class="author">Đông Ngô</span>
-                                <span class="date">6 phút đọc</span>
-                            </div>
-                        </div>
-                    </article>
+                    
                 </div>
             </section>
         </main>

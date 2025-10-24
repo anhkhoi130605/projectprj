@@ -104,11 +104,14 @@
                                         </div>
                                     </div>
                                     <div class="course-content">
-                                        <h3 class="course-title">Kiến Thức Nền Tảng</h3>
-                                        <p class="course-label">Miễn phí</p>
-                                        <p class="course-description">Để có cái nhìn tổng quan về ngành IT - Lập trình với các bạn xem các videos tại khóa này trước nhé.</p>
-                                        <button class="btn-view-course">XEM KHÓA HỌC</button>
-                                    </div>
+    <h3 class="course-title">Kiến Thức Nền Tảng</h3>
+    <p class="course-label">Miễn phí</p>
+    <p class="course-description">
+        Để có cái nhìn tổng quan về ngành IT - Lập trình với các bạn xem các videos tại khóa này trước nhé.
+    </p>
+    <a href="${pageContext.request.contextPath}/eduHome/lessonNewbie.jsp?id=1" class="btn-view-course">XEM KHÓA HỌC</a>
+</div>
+
                                 </div>
                             </div>
                         </section>
@@ -131,7 +134,7 @@
                                         <h3 class="course-title">HTML CSS Pro</h3>
                                         <p class="course-price">2.500.000đ <span class="original-price">1.299.000đ</span></p>
                                         <p class="course-description">Khóa học HTML CSS Pro phù hợp cho cả người mới bắt đầu, lên tới 8 dự án Figma, 300+ bài tập và flashcards, tăng 3+ games, tăng 20+ Figma để thực hành, công đồng viên Pro nhất tính hỗ trợ nhau, mua một lần mãi mãi.</p>
-                                        <button class="btn-view-course">XEM KHÓA HỌC</button>
+                                        <a href="${pageContext.request.contextPath}/eduHome/lessonNewbie.jsp?id=3" class="btn-view-course">XEM KHÓA HỌC</a>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +158,7 @@
                                         <h3 class="course-title">Lập Trình JavaScript Cơ Bản</h3>
                                         <p class="course-label">Miễn phí</p>
                                         <p class="course-description">Học javascript cơ bản phù hợp cho người chưa từng học lập trình. Với hơn 100 bài học và có bài tập thực hành sau mỗi bài học.</p>
-                                        <button class="btn-view-course">XEM KHÓA HỌC</button>
+                                        <a href="${pageContext.request.contextPath}/eduHome/lessonNewbie.jsp?id=5" class="btn-view-course">XEM KHÓA HỌC</a>
                                     </div>
                                 </div>
                                 <div class="course-card">
@@ -169,7 +172,7 @@
                                         <h3 class="course-title">Lập Trình JavaScript Nâng Cao</h3>
                                         <p class="course-label">Miễn phí</p>
                                         <p class="course-description">Hiểu sâu hơn về cách javascript hoạt động, tìm hiểu về IIFE, closure, reference types, this keyword, bind, call, apply, prototype...</p>
-                                        <button class="btn-view-course">XEM KHÓA HỌC</button>
+                                        <a href="${pageContext.request.contextPath}/eduHome/lessonNewbie.jsp?id=6" class="btn-view-course">XEM KHÓA HỌC</a>
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +196,7 @@
                                         <h3 class="course-title">Làm việc với Terminal & Ubuntu</h3>
                                         <p class="course-label">Miễn phí</p>
                                         <p class="course-description">Số hầu một terminal hiện đại, mạnh mẽ trong tập biến và học cách làm việc với Ubuntu là một bước quan trọng trên con đường trở thành một Web Developer.</p>
-                                        <button class="btn-view-course">XEM KHÓA HỌC</button>
+                                        <a href="${pageContext.request.contextPath}/eduHome/lessonNewbie.jsp?id=4" class="btn-view-course">XEM KHÓA HỌC</a>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +220,7 @@
                                         <h3 class="course-title">Xây Dựng Website với ReactJS</h3>
                                         <p class="course-label">Miễn phí</p>
                                         <p class="course-description">Khóa học ReactJS từ cơ bản tới nâng cao, kết quả cuối cùng khóa học này là bạn có thể làm hầu hết các dự án trên Tiktok, bạn có thể tự tin đi xin việc khi nam chắc các kiến thức được chia sẻ trong khóa học này.</p>
-                                        <button class="btn-view-course">XEM KHÓA HỌC</button>
+                                        <a href="${pageContext.request.contextPath}/eduHome/lessonNewbie.jsp?id=7" class="btn-view-course">XEM KHÓA HỌC</a>
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +251,7 @@
                         <div class="promo-card-content">
                             <div class="promo-header">Theo dõi kênh Youtube</div>
                             <div class="youtube-info">
-                                <img src="${pageContext.request.contextPath}/assets/images/youtube-avatar.jpg" alt="F8 Official" class="youtube-avatar">
+                                 <img src="${pageContext.request.contextPath}/assets/images/card1.png" alt="F8 Official" class="youtube-avatar">
                                 <div class="youtube-details">
                                     <h4>E-Learning System Official</h4>
                                     <button class="btn-subscribe">SUBSCRIBE</button>
