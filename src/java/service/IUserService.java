@@ -10,7 +10,7 @@ public interface IUserService {
      * @param password mật khẩu
      * @return đối tượng User nếu đúng, null nếu sai
      */
-    User checkLoginUser(String usernameOrEmail, String password);
+    User checkLoginUser(String Email, String password);
 
     /**
      * Lấy thông tin người dùng theo ID.

@@ -19,11 +19,23 @@
     </div>
 
     <div class="modal-body">
-      <!-- 🔹 Đăng ký với Google -->
-      <button class="auth-btn google-btn" type="button" onclick="handleGoogleSignup()">
-        <span class="btn-icon">G</span>
-        <span>Đăng ký với Google</span>
-      </button>
+      <!-- 🔹 Đăng nhập bằng Google -->
+        <!-- Nút đăng nhập Google -->
+    <div id="g_id_onload"
+         data-client_id="241470665821-3vbsh1pbsp17rd1vb6dctv2qlh5c721g.apps.googleusercontent.com"
+         data-login_uri="http://localhost:9999/PRJ_Assginment_EDUCATION/google-login"
+         data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard"
+         data-shape="rectangular"
+         data-theme="outline"
+         data-text="signin_with"
+         data-size="large"
+         data-logo_alignment="left">
+    </div>
+
       <!-- 🔹 Form đăng ký -->
       <form action="${pageContext.request.contextPath}/register" method="post" class="auth-form">
         <div class="form-group">

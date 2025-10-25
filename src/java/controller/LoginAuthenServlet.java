@@ -67,14 +67,13 @@ public class LoginAuthenServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String username = request.getParameter("username") != null ? request.getParameter("username").trim() : "";
+        String username = request.getParameter("input") != null ? request.getParameter("input").trim() : "";
         String password = request.getParameter("password") != null ? request.getParameter("password").trim() : "";
         String rememberMe = request.getParameter("rememberMe");
 
-        // 👉 Nếu DB lưu hash thì bật dòng dưới, còn nếu test plain thì để nguyên.
-        // String hashedPassword = hashPassWord.hash(password);
-        // User user = userService.checkLoginUser(username, hashedPassword);
-        System.out.println("Nhập username = " + username + ", password = " + password);
+         //👉 Nếu DB lưu hash thì bật dòng dưới, còn nếu test plain thì để nguyên.
+         String hashedPassword = hashPassWord.hash(password);
+
         User user = userService.checkLoginUser(username, password);
 
         if (user != null) {

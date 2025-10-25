@@ -42,7 +42,7 @@
       <!-- 🔹 Form đăng nhập -->
       <form action="${pageContext.request.contextPath}/login" method="post" class="auth-form">
         <div class="form-group">
-          <input type="text" name="username" placeholder="Tên Đăng Nhập" class="form-input" required>
+          <input type="text" name="input" placeholder="Tên Đăng Nhập hoặc Email" class="form-input" required>
         </div>
 
         <div class="form-group">
