@@ -1,192 +1,219 @@
-/* Reset và base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ========== AUTH MODAL (WHITE TRANSLUCENT BACKGROUND) ========== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.25); /* white translucent overlay */
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease;
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
-  min-height: 100vh;
+.modal.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0ea5e9;
-  position: relative;
-  overflow: hidden;
 }
 
-/* Geometric background */
-.geometric-bg {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  animation: geometricFloat 25s infinite ease-in-out;
-}
-.shape:nth-child(1) { width: 100px; height: 100px; top: 15%; left: 85%; animation-delay: 0s; }
-.shape:nth-child(2) { width: 60px; height: 60px; top: 70%; left: 10%; animation-delay: -8s; }
-.shape:nth-child(3) { width: 80px; height: 80px; top: 30%; left: 20%; animation-delay: -15s; }
-.shape:nth-child(4) { width: 120px; height: 120px; bottom: 10%; right: 15%; animation-delay: -20s; }
-
-@keyframes geometricFloat {
-  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); }
-  25% { transform: translateY(-30px) translateX(20px) scale(1.1); }
-  50% { transform: translateY(-10px) translateX(-15px) scale(0.9); }
-  75% { transform: translateY(-40px) translateX(10px) scale(1.05); }
-}
-
-.auth-container {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  width: 100%;
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9); /* light semi-transparent white */
+  border-radius: 16px;
+  padding: 32px;
+  width: 90%;
   max-width: 400px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease;
   position: relative;
-  z-index: 10;
 }
 
-.auth-header {
+/* ========== HEADER ========== */
+.modal-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
-.auth-header h1 {
-  color: #0ea5e9;
-  font-size: 2.2rem;
+.modal-header h2 {
+  font-size: 20px;
   font-weight: 700;
-  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #222;
+  margin-bottom: 8px;
 }
 
-/* --- Floating label --- */
-.form-group {
-  position: relative;
-  margin-bottom: 25px;
+.modal-header p {
+  font-size: 13px;
+  color: #666;
 }
 
-.form-input {
-  width: 100%;
-  padding: 14px 12px;
-  border: 2px solid #e2e8f0;
-  border-radius: 10px;
-  background: white;
-  outline: none;
-  font-size: 1rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.form-input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
-}
-
-.form-group label {
+/* ========== CLOSE BUTTON ========== */
+.modal-close {
   position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  color: #94a3b8;
-  font-size: 1rem;
-  pointer-events: none;
-  background: white;
-  padding: 0 6px;
-  transition: 0.2s ease all;
-}
-
-.form-input:focus + label,
-.form-input:not(:placeholder-shown) + label {
-  top: 0;
-  left: 10px;
-  font-size: 0.85rem;
-  color: #3b82f6;
-}
-
-.forgot-password {
-  text-align: right;
-  margin-bottom: 15px;
-}
-
-.forgot-password a {
-  color: #6366f1;
-  text-decoration: none;
-  font-weight: 500;
-}
-.forgot-password a:hover {
-  text-decoration: underline;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
-  color: white;
+  right: 16px;
+  top: 16px;
+  background: none;
   border: none;
-  padding: 15px;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 22px;
   cursor: pointer;
-  width: 100%;
+  color: #666;
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+.modal-close:hover {
+  color: #0078ff;
 }
 
-.social-login {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.social-buttons {
+/* ========== FORM ========== */
+.auth-form {
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.btn-social {
-  flex: 1;
-  padding: 12px;
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
-  background: white;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.1);
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper .form-input {
+  padding-right: 40px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: #777;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: #0078ff;
+}
+
+/* ========== BUTTONS ========== */
+.form-submit {
+  padding: 10px 14px;
+  background-color: #0078ff;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: #005fcc;
+  transform: translateY(-2px);
+}
+
+.auth-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.btn-google { color: #db4437; }
-.btn-facebook { color: #4267b2; }
+.auth-btn:hover {
+  background-color: rgba(0, 120, 255, 0.1);
+  border-color: #0078ff;
+}
 
-.btn-google:hover { background: #fef2f2; border-color: #db4437; }
-.btn-facebook:hover { background: #eff6ff; border-color: #4267b2; }
-
-.auth-links {
+/* ========== FOOTER ========== */
+.auth-footer {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #555;
 }
 
-.auth-links a {
-  color: #0ea5e9;
+.auth-footer a {
+  color: #0078ff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-.auth-links a:hover {
-  color: #3b82f6;
+.auth-footer a:hover {
   text-decoration: underline;
+}
+
+/* ========== CHECKBOX ========== */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #333;
+}
+
+.checkbox-input {
+  width: 16px;
+  height: 16px;
+  accent-color: #0078ff;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 92%;
+    padding: 24px;
+  }
+  .modal-header h2 {
+    font-size: 18px;
+  }
+  .form-submit {
+    font-size: 13px;
+  }
 }

@@ -8,99 +8,35 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 /**
  *
  * @author Hieu
  */
-@Entity
-@Table(name = "User")
-@NamedQueries({
-    @NamedQuery(name = "User_1.findAll", query = "SELECT u FROM User_1 u"),
-    @NamedQuery(name = "User_1.findByUserID", query = "SELECT u FROM User_1 u WHERE u.userID = :userID"),
-    @NamedQuery(name = "User_1.findByPhoneNumber", query = "SELECT u FROM User_1 u WHERE u.phoneNumber = :phoneNumber"),
-    @NamedQuery(name = "User_1.findByEmail", query = "SELECT u FROM User_1 u WHERE u.email = :email"),
-    @NamedQuery(name = "User_1.findByAvatarUrl", query = "SELECT u FROM User_1 u WHERE u.avatarUrl = :avatarUrl"),
-    @NamedQuery(name = "User_1.findByStatus", query = "SELECT u FROM User_1 u WHERE u.status = :status"),
-    @NamedQuery(name = "User_1.findByPassword", query = "SELECT u FROM User_1 u WHERE u.password = :password"),
-    @NamedQuery(name = "User_1.findByRole", query = "SELECT u FROM User_1 u WHERE u.role = :role"),
-    @NamedQuery(name = "User_1.findByUserName", query = "SELECT u FROM User_1 u WHERE u.userName = :userName"),
-    @NamedQuery(name = "User_1.findByCreateAt", query = "SELECT u FROM User_1 u WHERE u.createAt = :createAt"),
-    @NamedQuery(name = "User_1.findByLastModifiedAt", query = "SELECT u FROM User_1 u WHERE u.lastModifiedAt = :lastModifiedAt"),
-    @NamedQuery(name = "User_1.findByLastModifiedID", query = "SELECT u FROM User_1 u WHERE u.lastModifiedID = :lastModifiedID"),
-    @NamedQuery(name = "User_1.findByBio", query = "SELECT u FROM User_1 u WHERE u.bio = :bio"),
-    @NamedQuery(name = "User_1.findByDateofbirth", query = "SELECT u FROM User_1 u WHERE u.dateofbirth = :dateofbirth"),
-    @NamedQuery(name = "User_1.findByFirstName", query = "SELECT u FROM User_1 u WHERE u.firstName = :firstName"),
-    @NamedQuery(name = "User_1.findByLastName", query = "SELECT u FROM User_1 u WHERE u.lastName = :lastName"),
-    @NamedQuery(name = "User_1.findByToken", query = "SELECT u FROM User_1 u WHERE u.token = :token"),
-    @NamedQuery(name = "User_1.findByRefreshToken", query = "SELECT u FROM User_1 u WHERE u.refreshToken = :refreshToken"),
-    @NamedQuery(name = "User_1.findByLoginProvider", query = "SELECT u FROM User_1 u WHERE u.loginProvider = :loginProvider"),
-    @NamedQuery(name = "User_1.findByProviderKey", query = "SELECT u FROM User_1 u WHERE u.providerKey = :providerKey"),
-    @NamedQuery(name = "User_1.findByEnrollmentCount", query = "SELECT u FROM User_1 u WHERE u.enrollmentCount = :enrollmentCount")})
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @Basic(optional = false)
-    @Column(name = "userID")
     private String userID;
-    @Column(name = "phoneNumber")
     private String phoneNumber;
-    @Column(name = "email")
     private String email;
-    @Column(name = "avatarUrl")
     private String avatarUrl;
-    @Basic(optional = false)
-    @Column(name = "status")
     private boolean status;
-    @Column(name = "password")
     private String password;
-    @Column(name = "role")
     private String role;
-    @Column(name = "userName")
     private String userName;
-    @Column(name = "createAt")
-    @Temporal(TemporalType.DATE)
     private Date createAt;
-    @Column(name = "lastModifiedAt")
-    @Temporal(TemporalType.DATE)
     private Date lastModifiedAt;
-    @Column(name = "lastModifiedID")
     private String lastModifiedID;
-    @Column(name = "bio")
     private String bio;
-    @Column(name = "dateofbirth")
-    @Temporal(TemporalType.TIMESTAMP)
     private Date dateofbirth;
-    @Column(name = "firstName")
     private String firstName;
-    @Column(name = "lastName")
     private String lastName;
-    @Basic(optional = false)
-    @Column(name = "token")
     private String token;
-    @Basic(optional = false)
-    @Column(name = "RefreshToken")
     private String refreshToken;
-    @Column(name = "LoginProvider")
     private String loginProvider;
-    @Column(name = "ProviderKey")
     private String providerKey;
-    @Basic(optional = false)
-    @Column(name = "EnrollmentCount")
     private int enrollmentCount;
-    @OneToMany(mappedBy = "userID")
-    private Collection<Courses> coursesCollection;
+    private Collection<Course> coursesCollection; // If Courses is also not a JPA entity, this might need further adjustment or removal
 
    public User() {
         this.userID = UUID.randomUUID().toString().toUpperCase();
@@ -311,11 +247,11 @@ public class User implements Serializable {
         this.enrollmentCount = enrollmentCount;
     }
 
-    public Collection<Courses> getCoursesCollection() {
+    public Collection<Course> getCoursesCollection() {
         return coursesCollection;
     }
 
-    public void setCoursesCollection(Collection<Courses> coursesCollection) {
+    public void setCoursesCollection(Collection<Course> coursesCollection) {
         this.coursesCollection = coursesCollection;
     }
 
@@ -341,7 +277,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "model.User_1[ userID=" + userID + " ]";
+        return "model.User[ userID=" + userID + ", userName=" + userName + " ]";
     }
     
 }

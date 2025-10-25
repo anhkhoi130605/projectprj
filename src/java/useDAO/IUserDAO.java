@@ -5,11 +5,13 @@
 package useDAO;
 
 import model.User;
+import java.util.List;
 
-/**
- *
- * @author Hieu
- */
 public interface IUserDAO {
     User checkLogin(String username, String password);
+    User getUserById(String userID);
+    boolean createUser(User user);
+    boolean updateUser(User user);
+    boolean softDeleteUser(String userID, String lastModifiedID);
+    List<User> getAllUsers();
 }
