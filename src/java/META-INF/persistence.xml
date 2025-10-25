@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+  <persistence-unit name="userPU" transaction-type="RESOURCE_LOCAL">
+
+    <!-- Provider chính thức cho Hibernate 6 -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <!-- Khai báo các entity -->
+    <class>model.User</class>
+    <class>model.Product</class>
+
+    <!-- Cấu hình database -->
+    <properties>
+      <!-- Thông tin kết nối SQL Server -->
+      <property name="jakarta.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=Sp25_DemoPRJ;encrypt=true;trustServerCertificate=true"/>
+      <property name="jakarta.persistence.jdbc.user" value="sa"/>
+      <property name="jakarta.persistence.jdbc.password" value="12345"/>
+
+      <!-- Hibernate Schema Management -->
+      <!-- update: cập nhật bảng nếu thiếu cột, không xoá dữ liệu -->
+      <!-- create: xoá & tạo lại bảng mỗi lần chạy -->
+      <!-- none: không can thiệp DB -->
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+      <!-- Dialect tự động chọn đúng SQL Server -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+
+      <!-- Hiển thị & format SQL -->
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.highlight_sql" value="true"/>
+
+      <!-- Tắt cảnh báo metadata khi extract schema -->
+      <property name="hibernate.hbm2ddl.jdbc_metadata_extraction_strategy" value="individually"/>
+
+      <!-- Cấu hình connection pool mặc định -->
+      <property name="hibernate.connection.pool_size" value="10"/>
+
+      <!-- Charset -->
+      <property name="hibernate.connection.charSet" value="UTF-8"/>
+
+      <!-- Logging (tùy chọn, giúp giảm dòng đỏ) -->
+      <property name="hibernate.show_comments" value="false"/>
+    </properties>
+
+  </persistence-unit>
+</persistence>
